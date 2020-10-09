@@ -83,8 +83,16 @@ under the License.
         </div>
       </div>
 
-      <a href="/docs/spot/v1/en/" class="lang" id="lang_box" style="display: block;">English</a>
+     <% if current_page.data.lang_en %>
+        <a href="/docs/spot/v2/en/" class="lang" id="lang_box" style="display: block;">English</a> 
+      <% end %>
 
+
+     <% if current_page.data.lang_cn %>
+        <a href="/docs/spot/v2/cn/" class="lang" id="lang_box" style="display: block;">English</a> 
+      <% end %>
+
+      
     </header>
 
 
