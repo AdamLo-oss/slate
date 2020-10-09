@@ -7,8 +7,7 @@ toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
   - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
 
-lang_cn:
-  - <a href="/docs/spot/v2/cn/" class="lang" id="lang_box" style="display: block;" >中文</a>
+lang_en: true
 
 includes:
   - change_en
