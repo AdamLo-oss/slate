@@ -9,7 +9,7 @@
 </thead><tbody>
 <tr>
 <td>2020.3.17 19:00</td>
-<td>GET /v1/order/matchresults</td>
+<td>GET /v2/order/matchresults</td>
 <td>Optimization</td>
 <td>The maximum range of parameter of size has been increased from 100 to 500</td>
 </tr>

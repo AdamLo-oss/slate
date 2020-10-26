@@ -71,7 +71,7 @@
 
 <p><strong>响应数据</strong></p>
 
-<p>参照 /api/v1/market.kline`</p>
+<p>参照 /api/v2/market.kline`</p>
 <h2 id='5ffad1afad'>最新价格查询</h2>
 <blockquote>
 <p>请求:</p>
