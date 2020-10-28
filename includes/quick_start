@@ -257,43 +257,61 @@
 
 <p><code>POST\n</code>
 <code>https://api.hotbit.io/api/v2/balance.query?api_key=6b97d781-5ffd-958f-576d96d0bbebc8c6&amp;assets=[&quot;BTC&quot;,&quot;ETH&quot;]&amp;sign=C88F04701D3349D0A93A0164DC5A4CD9</code></p>
-<h2 id='5dd7427c5e'>业务字典</h2><h3 id='b79e080266'>交易对</h3>
-<p>交易对由基础币种和报价币种组成。以交易对 BTC/USDT 为例，BTC 为基础币种，USDT 为报价币种。</p>
 
-<p>基础币种对应字段为 base-currency 。</p>
+<!-- 
+## 业务字典
 
-<p>报价币种对应字段为 quote-currency 。</p>
-<h3 id='id'>订单、成交相关ID说明</h3>
-<ul>
-<li>order-id : 订单的唯一编号</li>
-<li>client-order-id : 客户自定义ID，该ID在下单时传入，与下单成功后返回的order-id对应，该ID 24小时内有效。</li>
-<li>match-id : 订单在撮合中的顺序编号</li>
-<li>trade-id : 成交的唯一编号</li>
-</ul>
-<h3 id='a1d4eaf18c'>订单类型</h3>
-<p>当前hotbit的订单类型是由买卖方向以及订单操作类型组成，例如：buy-market，buy为买卖方向，market为操作类型。</p>
+### 交易对
 
-<p>买卖方向：</p>
+交易对由基础币种和报价币种组成。以交易对 BTC/USDT 为例，BTC 为基础币种，USDT 为报价币种。
 
-<ul>
-<li>buy : 买</li>
-<li>sell: 卖</li>
-</ul>
+基础币种对应字段为 base-currency 。
 
-<p>订单种类:</p>
+报价币种对应字段为 quote-currency 。
 
-<ul>
-<li>type : 1=限价单</li>
-<li>side : 1-卖方，2-买方</li>
-</ul>
-<h3 id='4e4ca9ca80'>订单状态</h3>
-<ul>
-<li>submitted : 等待成交，该状态订单已进入撮合队列当中。</li>
-<li>partial-filled : 部分成交，该状态订单在撮合队列当中，订单的部分数量已经被市场成交，等待剩余部分成交。</li>
-<li>filled : 已成交。该状态订单不在撮合队列中，订单的全部数量已经被市场成交。</li>
-<li>partial-canceled : 部分成交撤销。该状态订单不在撮合队列中，此状态由partial-filled转化而来，订单数量有部分被成交，但是被撤销。</li>
-<li>canceled : 已撤销。该状态订单不在撮合订单中，此状态订单没有任何成交数量，且被成功撤销。</li>
-<li>canceling : 撤销中。该状态订单正在被撤销的过程中，因订单最终需在撮合队列中剔除才会被真正撤销，所以此状态为中间过渡态。</li>
-</ul>
 
-<p>更多信息，可以点击 <a href="https://www.hotbit.io">Hotbit</a> 进行了解。</p>
+### 订单、成交相关ID说明
+
+* order-id : 订单的唯一编号
+* client-order-id : 客户自定义ID，该ID在下单时传入，与下单成功后返回的order-id对应，该ID 24小时内有效。
+* match-id : 订单在撮合中的顺序编号
+* trade-id : 成交的唯一编号
+
+### 订单类型
+
+当前hotbit的订单类型是由买卖方向以及订单操作类型组成，例如：buy-market，buy为买卖方向，market为操作类型。
+
+买卖方向：
+
+* buy : 买
+* sell: 卖
+
+订单种类:
+
+* type : 1=限价单
+* side : 1-卖方，2-买方
+
+
+### 订单状态
+
+* submitted : 等待成交，该状态订单已进入撮合队列当中。
+* partial-filled : 部分成交，该状态订单在撮合队列当中，订单的部分数量已经被市场成交，等待剩余部分成交。
+* filled : 已成交。该状态订单不在撮合队列中，订单的全部数量已经被市场成交。
+* partial-canceled : 部分成交撤销。该状态订单不在撮合队列中，此状态由partial-filled转化而来，订单数量有部分被成交，但是被撤销。
+* canceled : 已撤销。该状态订单不在撮合订单中，此状态订单没有任何成交数量，且被成功撤销。
+* canceling : 撤销中。该状态订单正在被撤销的过程中，因订单最终需在撮合队列中剔除才会被真正撤销，所以此状态为中间过渡态。
+
+
+更多信息，可以点击 [Hotbit](https://www.hotbit.io) 进行了解。
+
+
+
+
+
+
+
+
+
+
+
+ -->

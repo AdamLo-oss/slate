@@ -91,8 +91,4 @@
 <h2 id='7125ff9ee0'>使用建议</h2>
 <p>1、行情类数据信息，建议使用WebSocket方式实时接收数据，并对接收数据进行缓存操作。</p>
 
-<p>2、获取最新成交价，推荐使用/market/trade接口或使用WebSocket订阅market.$symbol.trade.detail，获取实时成交价格。</p>
-
-<p>3、订单成交推送建议使用orders.$symbol.update主题，该主题具有严格的时序性以及更低的时延。</p>
-
-<p>4、下单资产信息使用WebSocket定订阅accounts主题，并结合Rest接口定时请求资产数据进行更新。</p>
+<p>2、获取最新成交价，推荐使用market.deals接口或使用WebSocket订阅 deals.subscribe，获取实时成交价格。</p>

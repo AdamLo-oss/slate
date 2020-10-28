@@ -299,9 +299,6 @@
                   <li>
                     <a href="#c64cd15fdc" class="toc-h2 toc-link" data-title="签名认证">签名认证</a>
                   </li>
-                  <li>
-                    <a href="#5dd7427c5e" class="toc-h2 toc-link" data-title="业务字典">业务字典</a>
-                  </li>
               </ul>
           </li>
           <li>
@@ -879,46 +876,64 @@
 
 <p><code>POST\n</code>
 <code>https://api.hotbit.io/api/v2/balance.query?api_key=6b97d781-5ffd-958f-576d96d0bbebc8c6&amp;assets=[&quot;BTC&quot;,&quot;ETH&quot;]&amp;sign=C88F04701D3349D0A93A0164DC5A4CD9</code></p>
-<h2 id='5dd7427c5e'>业务字典</h2><h3 id='b79e080266'>交易对</h3>
-<p>交易对由基础币种和报价币种组成。以交易对 BTC/USDT 为例，BTC 为基础币种，USDT 为报价币种。</p>
 
-<p>基础币种对应字段为 base-currency 。</p>
+<!-- 
+## 业务字典
 
-<p>报价币种对应字段为 quote-currency 。</p>
-<h3 id='id'>订单、成交相关ID说明</h3>
-<ul>
-<li>order-id : 订单的唯一编号</li>
-<li>client-order-id : 客户自定义ID，该ID在下单时传入，与下单成功后返回的order-id对应，该ID 24小时内有效。</li>
-<li>match-id : 订单在撮合中的顺序编号</li>
-<li>trade-id : 成交的唯一编号</li>
-</ul>
-<h3 id='a1d4eaf18c'>订单类型</h3>
-<p>当前hotbit的订单类型是由买卖方向以及订单操作类型组成，例如：buy-market，buy为买卖方向，market为操作类型。</p>
+### 交易对
 
-<p>买卖方向：</p>
+交易对由基础币种和报价币种组成。以交易对 BTC/USDT 为例，BTC 为基础币种，USDT 为报价币种。
 
-<ul>
-<li>buy : 买</li>
-<li>sell: 卖</li>
-</ul>
+基础币种对应字段为 base-currency 。
 
-<p>订单种类:</p>
+报价币种对应字段为 quote-currency 。
 
-<ul>
-<li>type : 1=限价单</li>
-<li>side : 1-卖方，2-买方</li>
-</ul>
-<h3 id='4e4ca9ca80'>订单状态</h3>
-<ul>
-<li>submitted : 等待成交，该状态订单已进入撮合队列当中。</li>
-<li>partial-filled : 部分成交，该状态订单在撮合队列当中，订单的部分数量已经被市场成交，等待剩余部分成交。</li>
-<li>filled : 已成交。该状态订单不在撮合队列中，订单的全部数量已经被市场成交。</li>
-<li>partial-canceled : 部分成交撤销。该状态订单不在撮合队列中，此状态由partial-filled转化而来，订单数量有部分被成交，但是被撤销。</li>
-<li>canceled : 已撤销。该状态订单不在撮合订单中，此状态订单没有任何成交数量，且被成功撤销。</li>
-<li>canceling : 撤销中。该状态订单正在被撤销的过程中，因订单最终需在撮合队列中剔除才会被真正撤销，所以此状态为中间过渡态。</li>
-</ul>
 
-<p>更多信息，可以点击 <a href="https://www.hotbit.io">Hotbit</a> 进行了解。</p>
+### 订单、成交相关ID说明
+
+* order-id : 订单的唯一编号
+* client-order-id : 客户自定义ID，该ID在下单时传入，与下单成功后返回的order-id对应，该ID 24小时内有效。
+* match-id : 订单在撮合中的顺序编号
+* trade-id : 成交的唯一编号
+
+### 订单类型
+
+当前hotbit的订单类型是由买卖方向以及订单操作类型组成，例如：buy-market，buy为买卖方向，market为操作类型。
+
+买卖方向：
+
+* buy : 买
+* sell: 卖
+
+订单种类:
+
+* type : 1=限价单
+* side : 1-卖方，2-买方
+
+
+### 订单状态
+
+* submitted : 等待成交，该状态订单已进入撮合队列当中。
+* partial-filled : 部分成交，该状态订单在撮合队列当中，订单的部分数量已经被市场成交，等待剩余部分成交。
+* filled : 已成交。该状态订单不在撮合队列中，订单的全部数量已经被市场成交。
+* partial-canceled : 部分成交撤销。该状态订单不在撮合队列中，此状态由partial-filled转化而来，订单数量有部分被成交，但是被撤销。
+* canceled : 已撤销。该状态订单不在撮合订单中，此状态订单没有任何成交数量，且被成功撤销。
+* canceling : 撤销中。该状态订单正在被撤销的过程中，因订单最终需在撮合队列中剔除才会被真正撤销，所以此状态为中间过渡态。
+
+
+更多信息，可以点击 [Hotbit](https://www.hotbit.io) 进行了解。
+
+
+
+
+
+
+
+
+
+
+
+ -->
 <h1 id='2d07d50c97'>接入说明</h1><h2 id='3951e02bdc'>接口概览</h2>
 <table><thead>
 <tr>
@@ -1012,38 +1027,34 @@
 <h2 id='7125ff9ee0'>使用建议</h2>
 <p>1、行情类数据信息，建议使用WebSocket方式实时接收数据，并对接收数据进行缓存操作。</p>
 
-<p>2、获取最新成交价，推荐使用/market/trade接口或使用WebSocket订阅market.$symbol.trade.detail，获取实时成交价格。</p>
-
-<p>3、订单成交推送建议使用orders.$symbol.update主题，该主题具有严格的时序性以及更低的时延。</p>
-
-<p>4、下单资产信息使用WebSocket定订阅accounts主题，并结合Rest接口定时请求资产数据进行更新。</p>
+<p>2、获取最新成交价，推荐使用market.deals接口或使用WebSocket订阅 deals.subscribe，获取实时成交价格。</p>
 <h1 id='0adb1147b3'>常见问题</h1><h2 id='api'>API信息通知</h2>
 <p>关于API新增、更新、下线等信息Hotbit会提前发布公告进行通知，建议您关注我们的公告，及时获取相关信息。</p>
 
 <p>公告订阅流程：点击“<a href="https://help.hotbit.io/hc/zh-cn/sections/115001057013-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">API公告</a>&quot;。</p>
 <h2 id='cb2d08126e'>接入、验签相关</h2>
-<p><strong>Q1：一个用户可以申请多少个Api Key？</strong></p>
+<!-- 
+__Q1：一个用户可以申请多少个Api Key？__
 
-<p>A: 每个用户可创建5组Api Key，每个Api Key可对应设置读取、交易 两种权限。</p>
+A: 每个用户可创建5组Api Key，每个Api Key可对应设置读取、交易 两种权限。
 
-<p>以下是两种权限的说明：</p>
+以下是两种权限的说明：
 
-<ul>
-<li>读取权限：读取权限用于对数据的查询接口，例如：订单查询、成交查询等。</li>
-<li>交易权限：交易权限用于下单、撤单、划转类接口。
-<del>* 提币权限：提币权限用于创建提币订单、取消提币订单操作。</del></li>
-</ul>
+* 读取权限：读取权限用于对数据的查询接口，例如：订单查询、成交查询等。
+* 交易权限：交易权限用于下单、撤单、划转类接口。
+~~* 提币权限：提币权限用于创建提币订单、取消提币订单操作。~~
+ -->
 
-<p><strong>Q2：为什么经常出现断线、超时的情况？</strong></p>
+<p><strong>Q1：为什么经常出现断线、超时的情况？</strong></p>
 
 <p>A：请检查是否属于以下情况：</p>
 
 <ol>
 <li><p>客户端服务器如在中国大陆境内，连接的稳定性很难保证，建议使用新加坡AWS云服务器进行访问。</p></li>
-<li><p>域名建议使用   api.huobi.io，ws.hotbit.io 其他不建议使用。</p></li>
+<li><p>域名建议使用   api.hotbit.io/api/v2，ws.hotbit.io/v2 其他不建议使用。</p></li>
 </ol>
 
-<p><strong>Q3：为什么WebSocket总是断开连接？</strong></p>
+<p><strong>Q2：为什么WebSocket总是断开连接？</strong></p>
 
 <p>A：常见原因有：</p>
 
@@ -1054,7 +1065,7 @@
 <li><p>议用户做好WebSocket连接断连重连机制，在确保心跳（Ping/Pong）消息正确回复后若连接意外断开，程序能够自动进行重新连接。</p></li>
 </ol>
 
-<p><strong>Q4：为什么签名认证总返回失败？</strong></p>
+<p><strong>Q3：为什么签名认证总返回失败？</strong></p>
 
 <p>A：请对比使用Secret Key签名前的字符串与以下字符串的区别</p>
 
@@ -1108,11 +1119,11 @@
 
 <p>A： K线周期以新加坡时间为基准开始计算，例如日K线的起始周期为新加坡时间0时-新加坡时间次日0时。</p>
 <h2 id='d9c242c3fe'>交易相关</h2>
-<p><strong>Q1：client-order-id是什么？</strong></p>
+<!-- __Q1：client-order-id是什么？__
 
-<p>A： client-order-id作为下单请求标识的一个参数，类型为字符串，长度为64。 此id为用户自己生成，24小时内有效。</p>
+A： client-order-id作为下单请求标识的一个参数，类型为字符串，长度为64。 此id为用户自己生成，24小时内有效。 -->
 
-<p><strong>Q2：如何获取下单数量、金额、小数限制、精度的信息？</strong></p>
+<p><strong>Q1：如何获取下单数量、金额、小数限制、精度的信息？</strong></p>
 
 <p>A： 可使用 Rest API GET /api/v2/asset.list 获取相关币对信息， 下单时注意最小下单数量和最小下单金额的区别。</p>
 <h2 id='adddf159e5'>账户重提相关</h2>
@@ -1324,7 +1335,7 @@
 <p><strong>HTTP 请求</strong></p>
 
 <ul>
-<li>GET /api/v2/server.time</li>
+<li>GET /api/v2/v2/allticker</li>
 </ul>
 
 <p><strong>请求参数</strong></p>
@@ -4590,6 +4601,10 @@ limit   |是        | Integer(无符号64位)  |查询个数限制    | 0，1，
 <h2 id='18c94a754c'>用户资产查询</h2>
 <aside class="notice">
    调用需要auth认证，请先调用server.auth方法请求认证，然后再调用。
+</aside>
+
+<aside class="warning">
+   参数 params 不能为空
 </aside>
 
 <blockquote>

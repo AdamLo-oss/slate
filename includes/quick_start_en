@@ -219,43 +219,51 @@ The complete request URL regarding the inquiry on the details of the order</p>
 
 <p><code>POST\n</code>
 <code>https://api.hotbit.io/api/v2/balance.query?api_key=6b97d781-5ffd-958f-576d96d0bbebc8c6&amp;assets=[&quot;BTC&quot;,&quot;ETH&quot;]&amp;sign=C88F04701D3349D0A93A0164DC5A4CD9</code></p>
-<h2 id='business-dictionary'>Business Dictionary</h2><h3 id='transaction-pair'>Transaction Pair</h3>
-<p>Transaction pair is composed of base currency and quote currency. Take BTC/USDT transaction pair for example, BTC is the base currency, and USDT is the quote currency.</p>
 
-<p>The corresponding field of base currency is base-currency 。</p>
+<!-- 
+## Business Dictionary
 
-<p>The corresponding field of quote currency is quote-currency 。</p>
-<h3 id='introduction-on-relevant-id-of-order-and-order-settlement'>Introduction on Relevant ID of Order and Order Settlement</h3>
-<ul>
-<li>order-id : The only id for the order</li>
-<li>client-order-id : The user&#39;s customized ID, which is imported by order placement and corresponds with the order-id returned after the order has been placed successfully. This ID is valid within 24 hours.</li>
-<li>match-id : The order ID during its matching process</li>
-<li>trade-id : The only id for order settlement</li>
-</ul>
-<h3 id='order-type'>Order Type</h3>
-<p>Currently, Hotbit&#39;s order types are composed of business directions and type of order operation, for example: buy-market, buy is business direction and market is type of operation</p>
+### Transaction Pair
 
-<p>Business Direction：</p>
+Transaction pair is composed of base currency and quote currency. Take BTC/USDT transaction pair for example, BTC is the base currency, and USDT is the quote currency.
 
-<ul>
-<li>buy : Buy</li>
-<li>sell: Sell</li>
-</ul>
+The corresponding field of base currency is base-currency 。
 
-<p>Order Type:</p>
+The corresponding field of quote currency is quote-currency 。
 
-<ul>
-<li>type : 1=Limit Order</li>
-<li>side : 1-Seller，2-Buyer</li>
-</ul>
-<h3 id='order-status'>Order Status</h3>
-<ul>
-<li>submitted : Waiting to be settled, the orders under this status have already entered the queue of matching process.</li>
-<li>partial-filled : Partly settled, the orders under this status are in the queue of matching process, with part of the order settled by the market already, and the remaining part of the order is waiting to be settled.</li>
-<li>filled : Settled. The orders under this status are not in the queue of matching process. The orders have all been settled by the market.</li>
-<li>partial-canceled : Part of the settled order cancelled. The order under this status is not in the queue of matching process, this status is transformed from partial-filled. The order is partly settled, but the settled part of the order has been cancelled.</li>
-<li>canceled : Canceled. The order under this status is not in the queue of matching orders. The order under this status does not have any settled quantity, and has been successfully canceled.</li>
-<li>canceling : Canceling. The order under this status is in the process of being canceled. Considering the fact that the order will only be completely canceled after it has been deleted from the queue of matching process, this status refers to the status of transition in between.</li>
-</ul>
 
-<p>For further information, please visit <a href="https://www.hotbit.io">Hotbit</a> for more details.</p>
+### Introduction on Relevant ID of Order and Order Settlement
+
+* order-id : The only id for the order
+* client-order-id : The user's customized ID, which is imported by order placement and corresponds with the order-id returned after the order has been placed successfully. This ID is valid within 24 hours.
+* match-id : The order ID during its matching process
+* trade-id : The only id for order settlement
+
+### Order Type
+
+Currently, Hotbit's order types are composed of business directions and type of order operation, for example: buy-market, buy is business direction and market is type of operation
+
+Business Direction：
+
+* buy : Buy
+* sell: Sell
+
+Order Type:
+
+* type : 1=Limit Order
+* side : 1-Seller，2-Buyer
+
+
+### Order Status
+
+* submitted : Waiting to be settled, the orders under this status have already entered the queue of matching process.
+* partial-filled : Partly settled, the orders under this status are in the queue of matching process, with part of the order settled by the market already, and the remaining part of the order is waiting to be settled.
+* filled : Settled. The orders under this status are not in the queue of matching process. The orders have all been settled by the market.
+* partial-canceled : Part of the settled order cancelled. The order under this status is not in the queue of matching process, this status is transformed from partial-filled. The order is partly settled, but the settled part of the order has been cancelled.
+* canceled : Canceled. The order under this status is not in the queue of matching orders. The order under this status does not have any settled quantity, and has been successfully canceled.
+* canceling : Canceling. The order under this status is in the process of being canceled. Considering the fact that the order will only be completely canceled after it has been deleted from the queue of matching process, this status refers to the status of transition in between.
+
+
+For further information, please visit [Hotbit](https://www.hotbit.io) for more details.
+
+ -->

@@ -752,6 +752,10 @@
    The call requires auth verification，please call server.auth method for the request of verification first，then call.
 </aside>
 
+<aside class="warning">
+   Parameter params cannot be empty
+</aside>
+
 <blockquote>
 <p>Request:</p>
 </blockquote>

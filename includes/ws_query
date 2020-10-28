@@ -790,6 +790,10 @@
    调用需要auth认证，请先调用server.auth方法请求认证，然后再调用。
 </aside>
 
+<aside class="warning">
+   参数 params 不能为空
+</aside>
+
 <blockquote>
 <p>请求:</p>
 </blockquote>

@@ -79,7 +79,7 @@
 <p><strong>HTTP 请求</strong></p>
 
 <ul>
-<li>GET /api/v2/server.time</li>
+<li>GET /api/v2/v2/allticker</li>
 </ul>
 
 <p><strong>请求参数</strong></p>

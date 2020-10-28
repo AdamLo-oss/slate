@@ -91,6 +91,4 @@
 <h2 id='recommendations'>Recommendations</h2>
 <p>1、For data information of market type, it is recommended to use WebSocket to receive real time data and conduct cache operation on data received.</p>
 
-<p>2、For retrieving latest market price, it is recommended to use /market/trade interface or subscribe market.$symbol.trade.detail by using WebSocket.
-3、For the push of order settlement, it is recommended to use the theme of orders.$symbol.update, as the theme is strictly time-ordered with lower level of delay.
-4、For asset information of orders placed, please use WebSocket to subscribe the theme of accounts and regularly request asset data for update via Rest interface.</p>
+<p>2、For retrieving latest market price, it is recommended to use market.deals interface or subscribe deals.subscribe by using WebSocket.</p>

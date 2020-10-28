@@ -1,26 +1,26 @@
 <h1 id='frequently-asked-questions'>Frequently Asked Questions</h1><h2 id='relevant-information-regarding-connection-and-verification-of-signature'>Relevant Information Regarding Connection and Verification of Signature</h2>
-<p><strong>Q1：How many API keys can each user apply for?</strong></p>
+<!-- 
+__Q1：How many API keys can each user apply for?__
 
-<p>A: Each user may create 5 groups of API key, and each API key may correspond to the settings of three permissions, namely reading, trading and withdrawal.</p>
+A: Each user may create 5 groups of API key, and each API key may correspond to the settings of three permissions, namely reading, trading and withdrawal.
 
-<p>Please refer to the detailed information of the three permissions below：</p>
+Please refer to the detailed information of the three permissions below：
 
-<ul>
-<li>Reading permission：Read permission applies to the inquiry interface of data, such as order inquiry and order settlement inquiry etc. </li>
-<li>Trading Permission：Trading permission applies to the interfaces of order placement, order withdrawal and transfer.</li>
-<li>Withdrawal Permission：Withdrawal permission applies to the creation of withdrawal orders and cancellation of withdrawal orders.</li>
-</ul>
+* Reading permission：Read permission applies to the inquiry interface of data, such as order inquiry and order settlement inquiry etc. 
+* Trading Permission：Trading permission applies to the interfaces of order placement, order withdrawal and transfer.
+* Withdrawal Permission：Withdrawal permission applies to the creation of withdrawal orders and cancellation of withdrawal orders.
+ -->
 
-<p><strong>Q2：Why do I often experience server offline and timeout?</strong></p>
+<p><strong>Q1：Why do I often experience server offline and timeout?</strong></p>
 
 <p>A：Please check if your experience can be attributed to the following situations:</p>
 
 <ol>
 <li>If the client end server is located in mainland China, the stability of connection is hard to be guaranteed. It is recommended to use the AWS cloud server located in Singapore instead. </li>
-<li>It is recommended to use the domain name of api.hotbit.io or api.hotbitcn.com. All other domain names are not recommended.</li>
+<li>It is recommended to use the domain name of api.hotbit.io/api/v2 and ws.hotbit.io/v2 All other domain names are not recommended.</li>
 </ol>
 
-<p><strong>Q3：Why WebSocket has always been disconnected?</strong></p>
+<p><strong>Q2：Why WebSocket has always been disconnected?</strong></p>
 
 <p>A：The common causes of the problem include:</p>
 
@@ -31,7 +31,7 @@
 <li><p>It is recommended that users should set up reconnection mechanism for the disconnection problem of WebSocket, so that the program will automatically conduct reconnection in case that any unexpected disconnection occurs after the heartbeat (Ping/Pong) information is responded correctly.</p></li>
 </ol>
 
-<p><strong>Q4：Why the return of signature verification always fails?</strong></p>
+<p><strong>Q3：Why the return of signature verification always fails?</strong></p>
 
 <p>A：Please distinguish the difference between the string without using the signature of Secret Key and the string below</p>
 
