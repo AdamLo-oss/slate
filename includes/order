@@ -48,7 +48,7 @@
 <td>amount</td>
 <td>是</td>
 <td>double</td>
-<td>代币符号数组</td>
+<td>数量</td>
 <td>-</td>
 </tr>
 <tr>
@@ -59,11 +59,11 @@
 <td>-</td>
 </tr>
 <tr>
-<td>isfee</td>
+<td>&lt;!-- isfee</td>
 <td>是</td>
 <td>Integer</td>
 <td>是否使用折扣币抵扣0 = &quot;否(no)&quot;，1=&quot;是(yes)&quot;</td>
-<td>0，1</td>
+<td>0，1 --&gt;</td>
 </tr>
 </tbody></table>
 
