@@ -806,7 +806,7 @@
 <p>Request:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"method"</span><span class="p">:</span><span class="s2">"asset.history"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="s2">"balance.history"</span><span class="p">,</span><span class="w"> 
     </span><span class="s2">"params"</span><span class="p">:[</span><span class="s2">"BTC"</span><span class="p">,</span><span class="s2">"deposit"</span><span class="p">,</span><span class="mi">1501940406</span><span class="p">,</span><span class="mi">1513328112</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">],</span><span class="w"> 
     </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">100</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -835,7 +835,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <ul>
-<li>method: asset.history</li>
+<li>method: balance.history</li>
 <li>params:</li>
 </ul>
 <h3 id='request-parameter-10'>Request Parameter</h3>

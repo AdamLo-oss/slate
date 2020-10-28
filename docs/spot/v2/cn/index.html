@@ -642,9 +642,11 @@
 <li><p><code>Secret Key</code> 签名认证加密所使用的密钥（仅申请时可见）</p></li>
 </ul>
 
+<!-- 
 <aside class="notice">
 创建 API Key 时可以绑定 IP 地址，**未绑定 IP 地址的 API Key 有效期为90天**。出于安全考虑，强烈建议您绑定 IP 地址。
 </aside>
+ -->
 
 <aside class="warning">
 风险提示：这两个密钥与账号安全紧密相关，无论何时都请勿将二者同时向其它人透露。API Key的泄露可能会造成您的资产损失（即使未开通提币权限），若发现API Key泄露请尽快删除该API Key。
@@ -758,7 +760,7 @@
 其他接口不可访问，如果尝试访问，系统会返回 “error-code 403”。
 </aside>
 <h2 id='5076603a3e'>接口类型</h2>
-<p>火币为用户提供两种接口，您可根据自己的使用场景和偏好来选择适合的方式进行查询行情、交易或提币。</p>
+<p>hotbit为用户提供两种接口，您可根据自己的使用场景和偏好来选择适合的方式进行查询行情、交易或提币。</p>
 <h3 id='rest-api'>REST API</h3>
 <p>REST，即Representational State Transfer的缩写，是目前较为流行的基于HTTP的一种通信机制，每一个URL代表一种资源。</p>
 
@@ -776,7 +778,7 @@
 
 <p>私有接口可用于交易管理和账户管理。每个私有请求必须使用您的API Key进行签名验证。</p>
 <h2 id='urls'>接入URLs</h2>
-<p>您可以自行比较使用api.hotbit.pro和ws.hotbit.pro两个域名的延迟情况，选择延迟低的进行使用。</p>
+<p>您可以自行比较使用api.hotbit.io/api/v2和ws.hotbit.io/v2两个域名的延迟情况，选择延迟低的进行使用。</p>
 
 <p><strong>REST API</strong></p>
 
@@ -891,7 +893,7 @@
 <li>trade-id : 成交的唯一编号</li>
 </ul>
 <h3 id='a1d4eaf18c'>订单类型</h3>
-<p>当前火币的订单类型是由买卖方向以及订单操作类型组成，例如：buy-market，buy为买卖方向，market为操作类型。</p>
+<p>当前hotbit的订单类型是由买卖方向以及订单操作类型组成，例如：buy-market，buy为买卖方向，market为操作类型。</p>
 
 <p>买卖方向：</p>
 
